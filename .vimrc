@@ -121,7 +121,7 @@ Bundle 'jelera/vim-javascript-syntax'
 " Bundle 'walm/jshint.vim'
 
 " Add Support TWIG syntax
-Bundle 'evidens/vim-twig
+Bundle 'evidens/vim-twig'
 
 " Installing bundles for the first time
 if iCanHazVundle == 0
