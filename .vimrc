@@ -43,8 +43,8 @@ Bundle 'Raimondi/delimitMate'
 " many false positive but still usefull
 Bundle 'scrooloose/syntastic'
 " Install jshint and csslint for syntastic
-silent !type jshint &>/dev/null || { cd ~; echo 'Installing jshint'; npm install jshint; cd -; }
-silent !type csslint &>/dev/null || { cd ~; echo 'Installing csslint'; npm install csslint; cd -; }
+"silent !type jshint &>/dev/null || { cd ~; echo 'Installing jshint'; npm install jshint; cd -; }
+"silent !type csslint &>/dev/null || { cd ~; echo 'Installing csslint'; npm install csslint; cd -; }
 
 " Great file system explorer, it appears when you open dir in vim
 " Allow modification of dir, and may other things
@@ -119,6 +119,9 @@ Bundle 'jelera/vim-javascript-syntax'
 " JShint :)
 " But not necessary with syntastics
 " Bundle 'walm/jshint.vim'
+
+" Add Support TWIG syntax
+Bundle 'evidens/vim-twig
 
 " Installing bundles for the first time
 if iCanHazVundle == 0
@@ -196,8 +199,13 @@ nmap <silent> <leader>tn :TernRename<CR>
 "-------------------------
 " Solarized
 
+" Set HIGH color terminal
+ let g:solarized_termcolors=256
+ let g:solarized_contrast="high"
+ let g:solarized_visibility="high"
+
 " Without this solarized have dark background in my terminal
- let g:solarized_termtrans=1
+ let g:solarized_termtrans=0
 
 " Setting up light color scheme
 set background=light
@@ -370,14 +378,14 @@ set expandtab
 set smarttab
 
 " number of spaces to use for each step of indent
-set shiftwidth=4
+set shiftwidth=2
 
 " Number of spaces that a Tab in the file counts for
-set tabstop=4
+set tabstop=2
 
 " Same but for editing operation (not shure what exactly does it means)
 " but in most cases tabstop and softtabstop better be the same
-set softtabstop=4
+set softtabstop=2
 
 " Round indent to multiple of 'shiftwidth'.
 " Indentation always be multiple of shiftwidth
