@@ -43,8 +43,8 @@ Bundle 'Raimondi/delimitMate'
 " many false positive but still usefull
 Bundle 'scrooloose/syntastic'
 " Install jshint and csslint for syntastic
-"silent !type jshint &>/dev/null || { cd ~; echo 'Installing jshint'; npm install jshint; cd -; }
-"silent !type csslint &>/dev/null || { cd ~; echo 'Installing csslint'; npm install csslint; cd -; }
+" silent !type jshint &>/dev/null || { cd ~; echo 'Installing jshint'; npm install jshint; cd -; }
+" silent !type csslint &>/dev/null || { cd ~; echo 'Installing csslint'; npm install csslint; cd -; }
 
 " Great file system explorer, it appears when you open dir in vim
 " Allow modification of dir, and may other things
@@ -52,13 +52,13 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 
 " Provide smart autocomplete results for javascript, and some usefull commands
-if has("python")
-    Bundle 'marijnh/tern_for_vim'
+" if has("python")
+"    Bundle 'marijnh/tern_for_vim'
     " install node dependencies for tern
-    if isdirectory(expand('~/.vim/bundle/tern_for_vim')) && !isdirectory(expand('~/.vim/bundle/tern_for_vim/node_modules'))
-        !npm --prefix ~/.vim/bundle/tern_for_vim install
-    endif
-endif
+"     if isdirectory(expand('~/.vim/bundle/tern_for_vim')) && !isdirectory(expand('~/.vim/bundle/tern_for_vim/node_modules'))
+"         !npm --prefix ~/.vim/bundle/tern_for_vim install
+"     endif
+" endif
 
 " Add smart commands for comments like:
 " gcc - Toggle comment for the current line
@@ -200,12 +200,12 @@ nmap <silent> <leader>tn :TernRename<CR>
 " Solarized
 
 " Set HIGH color terminal
- let g:solarized_termcolors=256
- let g:solarized_contrast="high"
- let g:solarized_visibility="high"
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 
 " Without this solarized have dark background in my terminal
- let g:solarized_termtrans=0
+let g:solarized_termtrans=0
 
 " Setting up light color scheme
 set background=light
@@ -354,7 +354,7 @@ set number
 set cursorline
 
 " maximum text length at 80 symbols, vim automatically breaks longer lines
-set textwidth=80
+" set textwidth=80
 
 " higlight column right after max textwidth
 set colorcolumn=+1
